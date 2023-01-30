@@ -57,7 +57,7 @@ if __name__ == "__main__":
 	try:
 		speed = diskspeedmeasure(dirname)
 		print("Disk writing speed: %.2f Mbytes per second" % speed)
-	except IOError, e:
+	except IOError as e:
 		#print("IOError:", e)
 		if e.errno == 13:
 			print("Could not create test file. Check that you have write rights to directory", dirname)
